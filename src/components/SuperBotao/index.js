@@ -1,22 +1,25 @@
 import React from "react";
-import { TouchableHighlight, StyleSheet, View, Text, Alert } from "react-native";
+import { StyleSheet, View, Text, Alert } from "react-native";
+
 
 const SuperBotao = (props) => {
     return (
-        <TouchableHighlight style={style.superBotao}
-            onPress={() => Alert.alert(props.alerta)}
+        <Text
+        style={style.superBotao}
         >
             <View style={style.botao}>
                 <Text style={style.valor}>{props.valor}</Text>
+                
             </View>
-        </TouchableHighlight>
+        </Text>
     );
 }
 
-export default SuperBotao
+
+export default SuperBotao;
 const style = StyleSheet.create({
     superBotao: {
-
+        marginLeft: 15,
     },
     botao: {
         marginLeft: 15,

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { StyleSheet, View, Text, TouchableOpacity, ImageBackground } from "react-native";
+import { StyleSheet, View, Text, TouchableOpacity, ImageBackground, Alert } from "react-native";
 
 import MeuInput from '../../components/Input';
 import Titulo from "../../components/Titulo";
@@ -30,8 +30,10 @@ const Cadastro = ({navigation}) => {
                 label="Confirme a senha"
                 placeholder="ex:1234abc" />
 
+             <TouchableOpacity onPress={() => Alert.alert("Conta criada com sucesso!")}>    
             <SuperBotao
-                valor="Criar Conta" alerta="Conta criada com sucesso!" />
+                valor="Criar Conta"  />
+            </TouchableOpacity>            
             <TouchableOpacity onPress={() => navigation.navigate('Login')}>
                 <Text style={styles.cadastro}>
                    Já tem uma conta? Faça o login agora!
